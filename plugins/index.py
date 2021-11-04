@@ -21,7 +21,7 @@ async def index_files(bot, query):
     if raju == 'reject':
         await query.message.delete()
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been decliened by our moderators.',
+                               f'Your Submission for indexing {chat} has been decliened.',
                                reply_to_message_id=int(lst_msg_id))
         return
 
@@ -32,7 +32,7 @@ async def index_files(bot, query):
     await query.answer('Processing...⏳', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been accepted by our moderators and will be added soon.',
+                               f'Your Submission for indexing {chat} has been ACCEPTED and will be ADDED soon.',
                                reply_to_message_id=int(lst_msg_id))
     await msg.edit(
         "Starting Indexing",
@@ -82,11 +82,11 @@ async def send_for_index(bot, message):
     if message.from_user.id in ADMINS:
         buttons = [
             [
-                InlineKeyboardButton('Yes',
+                InlineKeyboardButton('YES',
                                      callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')
             ],
             [
-                InlineKeyboardButton('close', callback_data='close_data'),
+                InlineKeyboardButton('CLOSE', callback_data='close_data'),
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -103,11 +103,11 @@ async def send_for_index(bot, message):
         link = f"@{message.forward_from_chat.username}"
     buttons = [
         [
-            InlineKeyboardButton('Accept Index',
+            InlineKeyboardButton('Accept',
                                  callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')
         ],
         [
-            InlineKeyboardButton('Reject Index',
+            InlineKeyboardButton('Reject',
                                  callback_data=f'index#reject#{chat_id}#{message.message_id}#{message.from_user.id}'),
         ]
     ]
@@ -115,7 +115,7 @@ async def send_for_index(bot, message):
     await bot.send_message(LOG_CHANNEL,
                            f'#IndexRequest\n\nBy : {message.from_user.mention} (<code>{message.from_user.id}</code>)\nChat ID/ Username - <code> {chat_id}</code>\nLast Message ID - <code>{last_msg_id}</code>\nInviteLink - {link}',
                            reply_markup=reply_markup)
-    await message.reply('ThankYou For the Contribution, Wait For My Moderators to verify the files.')
+    await message.reply('ThankYou For the Contribution, Wait to verify the files.')
 
 
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))
@@ -183,10 +183,10 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
                     can = [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
                     reply = InlineKeyboardMarkup(can)
                     await msg.edit_text(
-                        text=f"Total messages fetched: <code>{current}</code>\nTotal messages saved: <code>{total_files}</code>\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nErrors Occured: <code>{errors}</code>",
+                        text=f"Total messages fetched : <code>{current}</code>\nTotal messages saved : <code>{total_files}</code>\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>",
                         reply_markup=reply)
         except Exception as e:
             logger.exception(e)
             await msg.edit(f'Error: {e}')
         else:
-            await msg.edit(f'Succesfully saved <code>{total_files}</code> to dataBase!\nDuplicate Files Skipped: <code>{duplicate}</code>\nDeleted Messages Skipped: <code>{deleted}</code>\nErrors Occured: <code>{errors}</code>')
+            await msg.edit(f'Succesfully saved <code>{total_files}</code> to DataBase!\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>')

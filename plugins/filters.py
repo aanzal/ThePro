@@ -17,7 +17,7 @@ from info import ADMINS
 async def addfilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
     args = message.text.html.split(None, 1)
 
@@ -122,7 +122,7 @@ async def get_all(client, message):
     chat_type = message.chat.type
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
     if chat_type == "private":
         userid = message.from_user.id
         grpid = await active_connection(str(userid))
@@ -184,7 +184,7 @@ async def get_all(client, message):
 async def deletefilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -235,7 +235,7 @@ async def deletefilter(client, message):
 async def delallconfirm(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":

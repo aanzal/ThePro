@@ -1,6 +1,6 @@
 {
-    "name": "EvaMariaBot",
-    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
+    "name": "ThePro",
+    "description": "ഒരു ചെമ്പ് ബിരിയാണി എടുക്കട്ടേ?",
     "stack": "container",
     "keywords": [
       "telegram",
@@ -15,19 +15,19 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/EvamariaTG/EvaMaria",
-    "repository": "https://github.com/EvamariaTG/EvaMaria",
+    "website": "https://github.com/aanzal/ThePro",
+    "repository": "https://github.com/aanzal/ThePro",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
             "required": true
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Get it from https://my.telegram.org",
             "required": true
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Get it from https://my.telegram.org",
             "required": true
         },
         "CHANNELS": {

@@ -16,8 +16,7 @@ async def addconnection(client,message):
         except:
             await message.reply_text(
                 "<b>Enter in correct format!</b>\n\n"
-                "<code>/connect groupid</code>\n\n"
-                "<i>Get your Group id by adding this bot to your group and use  <code>/id</code></i>",
+                "<code>/connect groupid</code>\n\n",
                 quote=True
             )
             return
@@ -32,12 +31,12 @@ async def addconnection(client,message):
             and st.status != "creator"
             and str(userid) not in ADMINS
         ):
-            await message.reply_text("You should be an admin in Given group!", quote=True)
+            await message.reply_text("<b>പറ്റിക്കാൻ നോക്കല്ലേ രാമാ...ആദ്യം ADMIN ആയിട്ട് വാ!</b>", quote=True)
             return
     except Exception as e:
         print(e)
         await message.reply_text(
-            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group!!",
+            "<b>ID തെറ്റാണ് ബ്രോ.\nഅല്ലെങ്കിൽ ഗ്രൂപ്പിൽ ഞാൻ ഉണ്ടോ എന്ന് നോക്ക്\nSomething Fishy!!</b>",
             quote=True,
         )
 
@@ -51,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Sucessfully connected to **{title}**\nNow manage your group from my pm !",
+                    f"ആഹാ**{title}**ൽ CONNECT ആയല്ലോ.\n<b>ഇനി ഈ ഗ്രൂപ്പ് എന്റെ അടുതിന്ന് മാനേജ് ചെയ്തോ</b> ☺️",
                     quote=True,
                     parse_mode="md"
                 )
@@ -63,14 +62,14 @@ async def addconnection(client,message):
                     )
             else:
                 await message.reply_text(
-                    "You're already connected to this chat!",
+                    "ആദ്ധ്യേ <b>CONNECT</b> ആയതാണ്!",
                     quote=True
                 )
         else:
-            await message.reply_text("Add me as an admin in group", quote=True)
+            await message.reply_text("Add me as an ADMIN in group", quote=True)
     except Exception as e:
         print(e)
-        await message.reply_text('Some error occured! Try again later.', quote=True)
+        await message.reply_text('Some ERROR occured! TRY AGAIN later.', quote=True)
         return
 
 
@@ -78,11 +77,11 @@ async def addconnection(client,message):
 async def deleteconnection(client,message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are ANONYMOUS ADMIN. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
-        await message.reply_text("Run /connections to view or disconnect from groups!", quote=True)
+        await message.reply_text("Run /connections to VIEW or DISCONNECT from groups!", quote=True)
 
     elif chat_type in ["group", "supergroup"]:
         group_id = message.chat.id
@@ -97,9 +96,9 @@ async def deleteconnection(client,message):
 
         delcon = await delete_connection(str(userid), str(group_id))
         if delcon:
-            await message.reply_text("Successfully disconnected from this chat", quote=True)
+            await message.reply_text("Successfully DISCONNECTED from this chat", quote=True)
         else:
-            await message.reply_text("This chat isn't connected to me!\nDo /connect to connect.", quote=True)
+            await message.reply_text("This chat isn't CONNECTED to me!\nDo /connect to CONNECT.", quote=True)
 
 
 @Client.on_message(filters.private & filters.command(["connections"]))
@@ -109,7 +108,7 @@ async def connections(client,message):
     groupids = await all_connections(str(userid))
     if groupids is None:
         await message.reply_text(
-            "There are no active connections!! Connect to some groups first.",
+            "ആദ്യം എന്തെങ്കിലും CONNECT ആക്ക്",
             quote=True
         )
         return

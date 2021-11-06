@@ -413,8 +413,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
             InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
             InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
             ],[
@@ -690,7 +688,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('I cant find anything related to that..\nDid you mean any one of these??', reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply('നിങ്ങൾ തന്നിരിക്കുന്ന സിനിമയുടെ പേര് ശെരിയാണോ എന്ന് ചെക്ക് ചെയ്യുക.\nഅത് അല്ലെങ്കിൽ ഈ സിനിമ എന്റെ അടുത്ത് കാണില്ല.', reply_markup=InlineKeyboardMarkup(btn))
     
 
 

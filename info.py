@@ -19,7 +19,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/1ac036573c742678aa556.jpg https://telegra.ph/file/621a74d1af8cfbdff4790.jpg https://telegra.ph/file/8f3e2a5bc00f37225851b.jpg https://telegra.ph/file/9b78e86598c7d8eeb3717.jpg https://telegra.ph/file/60db926665f264f6428c0.jpg https://telegra.ph/file/00345533e093721c4e05f.jpg https://telegra.ph/file/3ef9472ab689f0f71e8c0.jpg https://telegra.ph/file/dc202376b1eced7cd03b7.jpg https://telegra.ph/file/e9ea5453e14aab47ec0ac.jpg https://telegra.ph/file/1d5ba6a98abad0b319bb8.jpg https://telegra.ph/file/9421ad04d35623ef463e4.jpg https://telegra.ph/file/d7ccb0cf64526ccd329b5.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/1ac036573c742678aa556.jpg https://telegra.ph/file/621a74d1af8cfbdff4790.jpg https://telegra.ph/file/8f3e2a5bc00f37225851b.jpg https://telegra.ph/file/9b78e86598c7d8eeb3717.jpg https://telegra.ph/file/60db926665f264f6428c0.jpg https://telegra.ph/file/3ef9472ab689f0f71e8c0.jpg https://telegra.ph/file/dc202376b1eced7cd03b7.jpg https://telegra.ph/file/e9ea5453e14aab47ec0ac.jpg https://telegra.ph/file/9421ad04d35623ef463e4.jpg https://telegra.ph/file/c2ec720c329b7d77e6d1c.jpg https://telegra.ph/file/5f3405b6767a24e7303bc.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]

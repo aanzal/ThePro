@@ -17,27 +17,27 @@ async def showid(client, message):
         username = message.from_user.username
         dc_id = message.from_user.dc_id or ""
         await message.reply_text(
-            f"<b>⇛ FIRST NAME :</b> {first}\n<b>⇛ LAST NAME :</b> {last}\n<b>⇛ USERNAME :</b> {username}\n<b>⇛ YOUR ID :</b> <code>{user_id}</code>",
+            f"<b>○ FIRST Name :</b> {first}\n<b>○ LAST Name :</b> {last}\n<b>○ USERNAME :</b> {username}\n<b>○ YOUR ID :</b> <code>{user_id}</code>",
             quote=True
         )
 
     elif chat_type in ["group", "supergroup"]:
         _id = ""
         _id += (
-            "<b>⇛ CHAT ID</b>: "
+            "<b>○ CHAT ID</b>: "
             f"<code>{message.chat.id}</code>\n"
         )
         if message.reply_to_message:
             _id += (
-                "<b>⇛ USER ID</b>: "
+                "<b>○ USER ID</b>: "
                 f"<code>{message.from_user.id if message.from_user else 'Anonymous'}</code>\n"
-                "<b>⇛ Replied USER ID</b>: "
+                "<b>○ Replied USER ID</b>: "
                 f"<code>{message.reply_to_message.from_user.id if message.reply_to_message.from_user else 'Anonymous'}</code>\n"
             )
             file_info = get_file_id(message.reply_to_message)
         else:
             _id += (
-                "<b>⇛ USER ID</b>: "
+                "<b>○ USER ID</b>: "
                 f"<code>{message.from_user.id if message.from_user else 'Anonymous'}</code>\n"
             )
             file_info = get_file_id(message)
@@ -70,14 +70,14 @@ async def who_is(client, message):
     if from_user is None:
         return await status_message.edit("no valid user_id / message specified")
     message_out_str = ""
-    message_out_str += f"<b>⇛ FIRST NAME :</b> {from_user.first_name}\n"
+    message_out_str += f"<b>○ FIRST Name :</b> {from_user.first_name}\n"
     last_name = from_user.last_name or "<b>None</b>"
-    message_out_str += f"<b>⇛ LAST NAME :</b> {last_name}\n"
-    message_out_str += f"<b>⇛ USER ID :</b> <code>{from_user.id}</code>\n"
+    message_out_str += f"<b>○ LAST Name :</b> {last_name}\n"
+    message_out_str += f"<b>○ USER ID :</b> <code>{from_user.id}</code>\n"
     username = from_user.username or "<b>None</b>"
-    dc_id = from_user.dc_id or "[USER Doesnt Have A Valid DP]"
-    message_out_str += f"<b>⇛ DATA CENTRE :</b> <code>{dc_id}</code>\n"
-    message_out_str += f"<b>⇛ USER NAME :</b> @{username}\n"
+    dc_id = from_user.dc_id or "[NOT AVAILABLE]"
+    message_out_str += f"<b>○ DATA Centre :</b> <code>{dc_id}</code>\n"
+    message_out_str += f"<b>○ USERNAME :</b> @{username}\n"
     if message.chat.type in (("supergroup", "channel")):
         try:
             chat_member_p = await message.chat.get_member(from_user.id)
@@ -126,23 +126,23 @@ async def who_is(client, message):
 @Client.on_message(filters.command(["imdb", 'search']))
 async def imdb_search(client, message):
     if ' ' in message.text:
-        k = await message.reply('Searching ImDB')
+        k = await message.reply('Searching IMDB 🔍')
         r, title = message.text.split(None, 1)
         movies = await get_poster(title, bulk=True)
         if not movies:
-            return await message.reply("No results Found")
+            return await message.reply("No results Found 🚫")
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{movie.get('title')} - {movie.get('year')}",
+                    text=f"{movie.get('title')} [ {movie.get('year')} ]",
                     callback_data=f"imdb#{movie.movieID}",
                 )
             ]
             for movie in movies
         ]
-        await k.edit('Here is what i found on IMDb', reply_markup=InlineKeyboardMarkup(btn))
+        await k.edit('Here is what I found on IMDB', reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply('Give me a MOVIE Name')
+        await message.reply('Give me a MOVIE / SERIES Name')
 
 @Client.on_callback_query(filters.regex('^imdb'))
 async def imdb_callback(bot: Client, query: CallbackQuery):

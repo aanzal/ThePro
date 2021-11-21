@@ -75,7 +75,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton("⟲ Try Again", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**Join My CHANNEL to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
@@ -83,7 +83,7 @@ async def start(client, message):
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/xaynbot?startgroup=true')
             ],
             [
             InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
@@ -107,7 +107,7 @@ async def start(client, message):
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
     if not files_:
-        return await message.reply('Try Asking your Movie at @CinemaGround\nI will filter your Movies there!')
+        return await message.reply('**Try Asking your Movie at @CinemaGround\nI will filter your Movies there!**')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)

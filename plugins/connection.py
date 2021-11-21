@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.connections_mdb import add_connection, all_connections, if_active, delete_connection
 from info import ADMINS
 
-@Client.on_message((filters.private | filters.group) & filters.command('connect'))
+@Client.on_message((filters.private | filters.group) & filters.command('connectit'))
 async def addconnection(client,message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -73,7 +73,7 @@ async def addconnection(client,message):
         return
 
 
-@Client.on_message((filters.private | filters.group) & filters.command('disconnect'))
+@Client.on_message((filters.private | filters.group) & filters.command('disconnectit'))
 async def deleteconnection(client,message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -101,14 +101,14 @@ async def deleteconnection(client,message):
             await message.reply_text("This chat isn't CONNECTED to me!\nDo /connect to CONNECT.", quote=True)
 
 
-@Client.on_message(filters.private & filters.command(["connections"]))
+@Client.on_message(filters.private & filters.command(["myconnections"]))
 async def connections(client,message):
     userid = message.from_user.id
 
     groupids = await all_connections(str(userid))
     if groupids is None:
         await message.reply_text(
-            "ആദ്യം എന്തെങ്കിലും CONNECT ആക്ക്",
+            "CONNECT SOME GROUP FIRST!",
             quote=True
         )
         return

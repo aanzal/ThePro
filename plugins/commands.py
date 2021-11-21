@@ -34,10 +34,18 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
+        buttons = [
+            [
+            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynaBot?startgroup=true')
+            ],
+            [
             InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
             InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
-            ],[
+            ],
+            [
+            InlineKeyboardButton('UPDATES CHANNEL', url='https://t.me/XaynUpdates')
+            ]
+            [
             InlineKeyboardButton('HELP', callback_data='help'),
             InlineKeyboardButton('ABOUT', callback_data='about')
         ]]
@@ -91,7 +99,7 @@ async def start(client, message):
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
     if not files_:
-        return await message.reply('No such file exist.')
+        return await message.reply('Try Asking your Movie at @CinemaGround\nI will filter your Movies there!')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
@@ -122,7 +130,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '📑 **Indexed channels/groups**\n'
+    text = '✔️ **Indexed channels / groups**\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:
@@ -146,7 +154,7 @@ async def channel_info(bot, message):
 async def log_file(bot, message):
     """Send log file"""
     try:
-        await message.reply_document('TelegramBot.log')
+        await message.reply_document('XaynBot.log')
     except Exception as e:
         await message.reply(str(e))
 

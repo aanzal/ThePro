@@ -36,7 +36,7 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynaBot?startgroup=true')
+            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
             InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),

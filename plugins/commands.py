@@ -81,10 +81,18 @@ async def start(client, message):
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
-        buttons = [[
+        buttons = [
+            [
+            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            ],
+            [
             InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
             InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
-            ],[
+            ],
+            [
+            InlineKeyboardButton('UPDATES CHANNEL', url='https://t.me/XaynUpdates')
+            ],
+            [
             InlineKeyboardButton('HELP', callback_data='help'),
             InlineKeyboardButton('ABOUT', callback_data='about')
         ]]

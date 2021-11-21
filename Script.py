@@ -7,7 +7,7 @@ Click <code>Help</code> If you have any Doubt about how to use me in your Groups
     HELP_TXT = """<u><b>Help</u></b> : <code>How to use me?</code>
 
 ⇢ Add me to your Group, Promote me as an Admin. 
-⇢ Subscribe here (http://t.me/cineground), to get access of movies / Series!
+⇢ Subscribe <a href='https://t.me/cineground'>HERE</a> , to get access of movies / Series!
 
 That's it! Bot is now <b>Ready to Show Off!</b>"""
     ABOUT_TXT = """<b>Nothing Great! But I know a Magic 🧙

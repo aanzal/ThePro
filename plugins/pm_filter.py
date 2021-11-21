@@ -150,7 +150,7 @@ async def advantage_spoll_choker(bot, query):
         return await query.answer("ശെരിയന്ന 🙂.", show_alert=True)
     movie = movies[(int(movie_))]
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("ജോലി ഒന്നും ആയില്യോ മോനെ ?", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     await query.answer('Checking for Movie...')

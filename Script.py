@@ -3,13 +3,13 @@ class script(object):
 I am Just an Advanced Telegram Auto Filter Bot :)
 Bot is Actually Made for <i>@CinemaGround</i>
 
-Click <code>Help</code> If you have any Doubt to use me!</b>"""
+Click <code>Help</code> If you have any Doubt about how to use me in your Groups!</b>"""
     HELP_TXT = """<u><b>Help</u></b> : <code>How to use me?</code>
 
 ⇢ Add me to your Group, Promote me as an Admin. 
-⇢ Subscribe here (http://t.me/cineground), to get access of movies!
+⇢ Subscribe here (http://t.me/cineground), to get access of movies / Series!
 
-That's it! Bot is now Ready to <b>Show Off!</b>"""
+That's it! Bot is now <b>Ready to Show Off!</b>"""
     ABOUT_TXT = """<b>Nothing Great! But I know a Magic 🧙
     Tap the Button below to see it. Bhoom!</b>"""
     SOURCE_TXT = """<b>ആ എടുത്തിട്ട് വരുന്നേ...കുറച്ചു കാത്തിരിക്ക്!</b>"""

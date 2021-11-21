@@ -44,7 +44,7 @@ async def start(client, message):
             ],
             [
             InlineKeyboardButton('UPDATES CHANNEL', url='https://t.me/XaynUpdates')
-            ]
+            ],
             [
             InlineKeyboardButton('HELP', callback_data='help'),
             InlineKeyboardButton('ABOUT', callback_data='about')

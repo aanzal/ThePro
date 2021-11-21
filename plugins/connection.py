@@ -50,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"ആഹാ. **{title}** ൽ CONNECT ആയല്ലോ.\nഇനി ഈ ഗ്രൂപ്പ് എന്റെ അടുതിന്ന് മാനേജ് ചെയ്തോ..",
+                    f"ആഹാ. **{title}** ൽ CONNECT ആയല്ലോ.",
                     quote=True,
                     parse_mode="md"
                 )
@@ -62,7 +62,7 @@ async def addconnection(client,message):
                     )
             else:
                 await message.reply_text(
-                    "ആദ്ധ്യേ <b>CONNECT</b> ആയതാണ്!",
+                    "Already <b>CONNECTED</b>!",
                     quote=True
                 )
         else:

@@ -37,12 +37,11 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
-            InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
+            InlineKeyboardButton('BOT UPDATES', url='https://t.me/XaynUpdates')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n@CinemaGround</b>",
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n<a href='https://t.me/XaynUpdates'>Bot Updates</a></b>",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
@@ -51,7 +50,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}\n\n@XaynUpdates</b>")
+            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey {u.mention}, Welcome to {message.chat.title}\n\n<a href='https://t.me/XaynUpdates'>Bot Updates</a></b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))

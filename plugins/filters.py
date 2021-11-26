@@ -52,7 +52,7 @@ async def addfilter(client, message):
 
 
     if len(args) < 2:
-        await message.reply_text("Command Incomplete!\nType Something like this to add filter\n/add | /filter Kurup (Reply for word Kurup)", quote=True)
+        await message.reply_text("Command Incomplete!\nType Something like this ↓ to add filter\n\n<code>/add | /filter Kurup (Reply for word Kurup)</code>", quote=True)
         return
 
     extracted = split_quotes(args[1])
@@ -66,7 +66,7 @@ async def addfilter(client, message):
         reply_text, btn, alert = parser(extracted[1], text)
         fileid = None
         if not reply_text:
-            await message.reply_text("ബട്ടൻസിനെ വെറുതെ വെക്കാൻ ഒന്നും പറ്റൂല, അയിന് എന്തെങ്കിലും TEXT കൊടുക്ക് !", quote=True)
+            await message.reply_text("**❌ Filter Not Saved**\n\n× Buttons can't be placed Alone!\n× Give some Text to your Filter!", quote=True)
             return
 
     elif message.reply_to_message and message.reply_to_message.reply_markup:

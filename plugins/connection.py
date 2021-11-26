@@ -31,12 +31,12 @@ async def addconnection(client,message):
             and st.status != "creator"
             and str(userid) not in ADMINS
         ):
-            await message.reply_text("<b>പറ്റിക്കാൻ നോക്കല്ലേ രാമാ...ആദ്യം ADMIN ആയിട്ട് വാ!</b>", quote=True)
+            await message.reply_text("<b>Try not to fool me!\nFirst be an Admin in this Group!</b>", quote=True)
             return
     except Exception as e:
         print(e)
         await message.reply_text(
-            "<b>ID തെറ്റാണ് ബ്രോ.\nഅല്ലെങ്കിൽ ഗ്രൂപ്പിൽ ഞാൻ ഉണ്ടോ എന്ന് നോക്ക്\nSomething Fishy!!</b>",
+            "<b>Error</b>\n\n× Maybe the ID you have given is Wrong!\n**<i>OR</i>**\n× Check i'm in this group. If not, Add me by Clicking <a href='http://t.me/XaynBot?startgroup=true'>Here</a> & Make me admin!",
             quote=True,
         )
 
@@ -50,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"ആഹാ. **{title}** ൽ CONNECT ആയല്ലോ.",
+                    f"Successfully Connected to **{title}**",
                     quote=True,
                     parse_mode="md"
                 )
@@ -66,7 +66,7 @@ async def addconnection(client,message):
                     quote=True
                 )
         else:
-            await message.reply_text("Add me as an ADMIN in group", quote=True)
+            await message.reply_text("Add me as an ADMIN in this group", quote=True)
     except Exception as e:
         print(e)
         await message.reply_text('Some ERROR occured! TRY AGAIN later.', quote=True)
@@ -130,7 +130,7 @@ async def connections(client,message):
             pass
     if buttons:
         await message.reply_text(
-            "Your connected group details ;\n\n",
+            "Your connected group details :\n\n",
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )

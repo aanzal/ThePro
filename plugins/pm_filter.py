@@ -374,9 +374,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption
                     )
-                await query.answer('Check PM,ഞാൻ PRIVATE ആയിട്ട് FILES SEND ചെയ്തിട്ടുണ്ട് ',show_alert = True)
+                await query.answer('Check PM. I have Send you Files Privately !',show_alert = True)
         except UserIsBlocked:
-            await query.answer('BLOCK ആക്കിയതും പോരാ, എന്നിട്ട് ഞാൻ FILES അയച്ചേരാനാ! അത് നല്ല കളി. UNBLOCK ME DUDE!!!',show_alert = True)
+            await query.answer('IF YOU NEEDED FILES, THEN WHY YOU BLOCKED ME ! UNBLOCK ME !!!',show_alert = True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
         except Exception as e:
@@ -384,12 +384,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ രാമേട്ടാ 🙂??",show_alert=True)
+            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ രാമേട്ടാ ??. YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('No Such File Exist. Try Asking Again!')
         files = files_[0]
         title = files.file_name
         size=get_size(files.file_size)
@@ -534,7 +534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "rfrsh":
-        await query.answer("Fetching MongoDb DataBase")
+        await query.answer("Fetching MongoDB")
         buttons = [[
             InlineKeyboardButton('CLOSE 🗑', callback_data='close_data'),
             InlineKeyboardButton('♻️', callback_data='rfrsh')

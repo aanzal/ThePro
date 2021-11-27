@@ -17,10 +17,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround')
+                InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏', url='https://t.me/CinemaGround')
             ],
             [
-                InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround'),
+                InlineKeyboardButton('𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url='https://t.me/CineGround'),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -36,18 +36,18 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
-            InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏', url='https://t.me/CinemaGround'),
+            InlineKeyboardButton('𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url='https://t.me/CineGround')
             ],
             [
-            InlineKeyboardButton('UPDATES CHANNEL', url='https://t.me/XaynUpdates')
+            InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url='https://t.me/XaynUpdates')
             ],
             [
-            InlineKeyboardButton('HELP', callback_data='help'),
-            InlineKeyboardButton('ABOUT', callback_data='about')
+            InlineKeyboardButton('𝐇𝐄𝐋𝐏', callback_data='help'),
+            InlineKeyboardButton('𝐀𝐁𝐎𝐔𝐓', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -83,18 +83,18 @@ async def start(client, message):
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
         buttons = [
             [
-            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/xaynbot?startgroup=true')
+            InlineKeyboardButton('➕ 𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
-            InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏', url='https://t.me/CinemaGround'),
+            InlineKeyboardButton('𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url='https://t.me/CineGround')
             ],
             [
-            InlineKeyboardButton('UPDATES CHANNEL', url='https://t.me/XaynUpdates')
+            InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url='https://t.me/XaynUpdates')
             ],
             [
-            InlineKeyboardButton('HELP', callback_data='help'),
-            InlineKeyboardButton('ABOUT', callback_data='about')
+            InlineKeyboardButton('𝐇𝐄𝐋𝐏', callback_data='help'),
+            InlineKeyboardButton('𝐀𝐁𝐎𝐔𝐓', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -107,7 +107,7 @@ async def start(client, message):
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
     if not files_:
-        return await message.reply('**Try Asking your Movie at @CinemaGround\nI will filter your Movies there!**')
+        return await message.reply('**Try Asking your Movie at @CinemaGround\nI will filter your Movies there!\n\n<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>**')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)

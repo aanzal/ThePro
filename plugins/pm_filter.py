@@ -374,7 +374,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption
                     )
-                await query.answer('Check PM. I have Send you Files Privately !',show_alert = True)
+                await query.answer('Check PM. I have Send you Files Privately. ( Just go to @XaynBot )',show_alert = True)
         except UserIsBlocked:
             await query.answer('IF YOU NEEDED FILES, THEN WHY YOU BLOCKED ME ! UNBLOCK ME !!!',show_alert = True)
         except PeerIdInvalid:
@@ -384,7 +384,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ രാമേട്ടാ ??. YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
+            await query.answer("ആ കളി എന്റെ അടുത്ത് നടക്കും എന്ന് തോന്നുന്നുണ്ടോ ??. YOU THINK I AM LIKE THAT FOOL 🙂??",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -413,11 +413,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('GROUP', url='https://t.me/CinemaGround'),
-            InlineKeyboardButton('CHANNEL', url='https://t.me/CineGround')
+            InlineKeyboardButton('𝗚𝗥𝗢𝗨𝗣', url='https://t.me/CinemaGround'),
+            InlineKeyboardButton('𝗖𝗛𝗔𝗡𝗡𝗘𝗟', url='https://t.me/CineGround')
             ],[
-            InlineKeyboardButton('HELP', callback_data='help'),
-            InlineKeyboardButton('ABOUT', callback_data='about')
+            InlineKeyboardButton('𝗛𝗘𝗟𝗣', callback_data='help'),
+            InlineKeyboardButton('𝗔𝗕𝗢𝗨𝗧', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -427,7 +427,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('CLOSE 🗑', callback_data='close_data'),
+            InlineKeyboardButton('𝗔𝗨𝗧𝗢 𝗙𝗜𝗟𝗧𝗘𝗥', callback_data='autofilter'),
+            InlineKeyboardButton('𝗠𝗔𝗡𝗨𝗔𝗟 𝗙𝗜𝗟𝗧𝗘𝗥', callback_data='manuelfilter')
+            ],[
+            InlineKeyboardButton('𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗢𝗡', callback_data='coct'),
+            InlineKeyboardButton('𝗘𝗫𝗧𝗥𝗔 𝗠𝗢𝗗𝗨𝗟𝗘𝗦', callback_data='extra')
+            ],[
+            InlineKeyboardButton('𝗦𝗧𝗔𝗧𝗨𝗦', callback_data='stats'),
+            InlineKeyboardButton('🔙 𝗕𝗔𝗖𝗞', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -515,7 +522,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "stats":
+    elif query.data == "mystatus":
         buttons = [[
             InlineKeyboardButton('CLOSE 🗑', callback_data='close_data'),
             InlineKeyboardButton('♻️', callback_data='rfrsh')
@@ -661,7 +668,7 @@ async def advantage_spell_chok(msg):
     query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|send|snd|movie(s)?|new|latest|br((o|u)h?)*|^h(e)?(l)*(o)*|mal(ayalam)?|tamil|file|that|give|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle)", "", msg.text) # plis contribute some common words 
     query = query.strip()
     if not query:
-        k = await msg.reply("No valid movie name given")
+        k = await msg.reply("No Valid Movie name Given.")
         await asyncio.sleep(8)
         await k.delete()
         return

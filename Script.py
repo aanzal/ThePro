@@ -26,7 +26,11 @@ That's it! <b>Bot is now Ready!</b>
 📂 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : <a href=https://www.mongodb.com/>𝗠𝗢𝗡𝗚𝗢 𝗗𝗕</a>
 
 👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
-    SOURCE_TXT = """<b>ആ എടുത്തിട്ട് വരുന്നേ...കുറച്ചു കാത്തിരിക്ക്!</b>"""
+    SOURCE_TXT = """𝐇𝐄𝐋𝐏 : <b>Source Code</b>
+
+- Zayn Bot is a Private Source Project. 
+
+<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
     MANUELFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Filters</b>
 
 - Filter is the feature were users can set automated Replies for a particular keyword and Zayn will respond whenever a keyword is found in the message.

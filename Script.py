@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>Hii {}.
+    START_TXT = """<b>Heyy {}.
 I'm an High-Tech Telegram Filter Bot :)
 Bot was Actually Made for <a href=https://t.me/CinemaGround>Cinema Ground</a>
 
@@ -8,7 +8,7 @@ Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!<
     HELP_TXT = """𝐇𝐄𝐋𝐏 : <b>How to use me?</b>
 
 - Add me to your Group, Promote me as an Admin. 
-- Subscribe our <a href='https://t.me/cineground'>Channel</a>, to get access of movies / Series!
+- Subscribe our <a href='https://t.me/CineGround'>Channel</a> , to get access of movies / Series!
 
 That's it! <b>Bot is now Ready!</b>
 

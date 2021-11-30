@@ -33,11 +33,11 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [
             [
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/XaynUpdates'),
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -73,11 +73,11 @@ async def start(client, message):
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay"]:
         buttons = [
             [
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url='http://t.me/XaynBot?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/XaynUpdates'),
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -121,7 +121,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '✔️ **Indexed channels / groups**\n'
+    text = '✔️ **Indexed Channels / Groups**\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:

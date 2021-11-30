@@ -76,7 +76,7 @@
         },
         "CUSTOM_FILE_CAPTION": {
             "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "value": "",
+            "value": "<code>{file_name}</code>\n\nSize : <code>{file_size}</code>\n\n© Powered by <a href='https://t.me/XaynUpdates'>Zayn</a>",
             "required": false
         },
         "DATABASE_URI": {

@@ -1,10 +1,10 @@
 class script(object):
     START_TXT = """<b>Hii {}.
-I am Just an Advanced Telegram Auto Filter Bot :)
-Bot is Actually Made for <i>@CinemaGround</i>
+I'm an High-Tech Telegram Filter Bot :)
+Bot was Actually Made for <a href=https://t.me/CinemaGround>Cinema Ground</a>
 
 Add me to your Groups & Enjoy!
-Click <code>Help</code> If you have any Doubt about how to use me in your Groups!</b>"""
+Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!</b>"""
     HELP_TXT = """𝐇𝐄𝐋𝐏 : <b>How to use me?</b>
 
 - Add me to your Group, Promote me as an Admin. 
@@ -28,7 +28,7 @@ That's it! <b>Bot is now Ready!</b>
 👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
     SOURCE_TXT = """𝐇𝐄𝐋𝐏 : <b>Source Code</b>
 
-- Zayn Bot is a Private Source Project. 
+- Zayn Bot is a Private Source Project.
 
 <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
     MANUELFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Filters</b>

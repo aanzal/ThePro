@@ -112,11 +112,11 @@ That's it! <b>Bot is now Ready!</b>
 <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>
 """
     ADMIN_TXT = """<b>Oh Yeah, Wait for It!</b>"""
-    STATUS_TXT = """○ 𝗧𝗢𝗧𝗔𝗟 𝗙𝗜𝗟𝗘𝗦 : <code>{}</code>
-○ 𝗧𝗢𝗧𝗔𝗟 𝗨𝗦𝗘𝗥𝗦 : <code>{}</code>
-○ 𝗧𝗢𝗧𝗔𝗟 𝗖𝗛𝗔𝗧𝗦 : <code>{}</code>
-○ 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 𝗨𝗦𝗘𝗗 : <code>{}</code>
-○ 𝗙𝗥𝗘𝗘 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
+    STATUS_TXT = """» 𝗧𝗢𝗧𝗔𝗟 𝗙𝗜𝗟𝗘𝗦 : <code>{}</code>
+» 𝗧𝗢𝗧𝗔𝗟 𝗨𝗦𝗘𝗥𝗦 : <code>{}</code>
+» 𝗧𝗢𝗧𝗔𝗟 𝗖𝗛𝗔𝗧𝗦 : <code>{}</code>
+» 𝗨𝗦𝗘𝗗 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
+» 𝗙𝗥𝗘𝗘 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
 
 <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
     LOG_TEXT_G = """#NewGroup

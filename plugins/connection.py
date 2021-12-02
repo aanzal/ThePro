@@ -118,7 +118,7 @@ async def connections(client,message):
             ttl = await client.get_chat(int(groupid))
             title = ttl.title
             active = await if_active(str(userid), str(groupid))
-            act = " - ACTIVE" if active else ""
+            act = " - Active" if active else ""
             buttons.append(
                 [
                     InlineKeyboardButton(
@@ -130,7 +130,7 @@ async def connections(client,message):
             pass
     if buttons:
         await message.reply_text(
-            "Your connected group details :\n\n",
+            "**Your connected group details :**\n\n",
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )

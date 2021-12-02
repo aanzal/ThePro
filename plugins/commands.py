@@ -36,7 +36,7 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/ZaynAndMillie'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -76,7 +76,7 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Group ➕', url='http://t.me/XaynBot?startgroup=true')
             ],
             [
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/XaynUpdates'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/ZaynAndMillie'),
             InlineKeyboardButton('👣 Help', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -90,7 +90,7 @@ async def start(client, message):
     file_id = message.command[1]
     files_ = await get_file_details(file_id)
     if not files_:
-        return await message.reply('**Try Asking your Movie at <a href=https://t.me/CinemaGround>Cinema Ground</a>\nI will filter your Movies there!\n\n<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>**')
+        return await message.reply('**Try Asking your Movie at <a href=https://t.me/CinemaGround>Cinema Ground</a>\nI will filter your Movies there!\n\n<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>**')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)

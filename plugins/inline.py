@@ -17,7 +17,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to SUBSCRIBE my Channel to USE the bot',
+                           switch_pm_text='You have to Subscribe our Channel to Use me.',
                            switch_pm_parameter="subscribe")
         return
 
@@ -91,7 +91,10 @@ async def answer(bot, query):
 def get_reply_markup(query):
     buttons = [
         [
-            InlineKeyboardButton('Developers', url="https://t.me/CinemaGround")
+            InlineKeyboardButton('Developers', url="https://t.me/ZaynAndMillie")
+        ],
+        [
+            InlineKeyboardButton('Search 🔍', switch_inline_query_current_chat=query)
         ]
         ]
     return InlineKeyboardMarkup(buttons)

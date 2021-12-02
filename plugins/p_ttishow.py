@@ -37,11 +37,11 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('BOT UPDATES', url='https://t.me/XaynUpdates')
+            InlineKeyboardButton('My Updates', url='https://t.me/ZaynAndMillie')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n<a href='https://t.me/XaynUpdates'>Bot Updates</a></b>",
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n<a href='https://t.me/ZaynAndMillie'>My Updates</a></b>",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
@@ -50,7 +50,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey {u.mention}, Welcome to {message.chat.title}\n\n<a href='https://t.me/XaynUpdates'>Bot Updates</a></b>")
+            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey {u.mention}, Welcome to {message.chat.title}\n\n<a href='https://t.me/ZaynAndMillie'>My Updates</a></b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -252,9 +252,9 @@ async def list_users(bot, message):
 async def list_chats(bot, message):
     raju = await message.reply('Getting List Of chats...')
     chats = await db.get_all_chats()
-    out = "Chats Saved Are:\n\n"
+    out = "Chats Saved Are :\n\n"
     async for chat in chats:
-        out += f"**Title:** `{chat['title']}`\n**ID:** `{chat['id']}`\n"
+        out += f"**Title :** `{chat['title']}`\n**ID :** `{chat['id']}`\n"
     try:
         await raju.edit_text(out)
     except MessageTooLong:

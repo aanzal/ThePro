@@ -21,21 +21,21 @@ async def index_files(bot, query):
     if raju == 'reject':
         await query.message.delete()
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been decliened.',
+                               f'Thank You for Your Submission.\nChannel : {chat}\n\n❣️ From 𝗭𝗮𝘆𝗻',
                                reply_to_message_id=int(lst_msg_id))
         return
 
     if lock.locked():
-        return await query.answer('Wait until previous process complete.', show_alert=True)
+        return await query.answer('Wait Until Previous process complete.', show_alert=True)
     msg = query.message
 
-    await query.answer('Processing...⏳', show_alert=True)
+    await query.answer('Starting...', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been ACCEPTED and will be ADDED soon.',
+                               f'Thank You for Your Submission.\nChannel : {chat}\n\n❣️ From 𝗭𝗮𝘆𝗻',
                                reply_to_message_id=int(lst_msg_id))
     await msg.edit(
-        "Starting Indexing",
+        "Starting Index",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
         )
@@ -66,7 +66,7 @@ async def send_for_index(bot, message):
     try:
         await bot.get_chat(chat_id)
     except ChannelInvalid:
-        return await message.reply('This may be a private channel / group. Make me an admin over there to index the files.')
+        return await message.reply('This may be a private Channel / Group. Make me an admin over there to index the files.')
     except (UsernameInvalid, UsernameNotModified):
         return await message.reply('Invalid Link specified.')
     except Exception as e:
@@ -91,7 +91,7 @@ async def send_for_index(bot, message):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply(
-            f'Do you Want To Index This Channel/ Group ?\n\nChat ID/ Username: <code>{chat_id}</code>\nLast Message ID: <code>{last_msg_id}</code>',
+            f'Do you Want To Index This Channel?\n\nChat ID/ Username : <code>{chat_id}</code>\nLast Message ID : <code>{last_msg_id}</code>',
             reply_markup=reply_markup)
 
     if type(chat_id) is int:
@@ -189,4 +189,4 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot):
             logger.exception(e)
             await msg.edit(f'Error: {e}')
         else:
-            await msg.edit(f'Succesfully saved <code>{total_files}</code> to DataBase!\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>')
+            await msg.edit(f'Succesfully Saved Files : <code>{total_files}</code>\nDuplicate Files Skipped : <code>{duplicate}</code>\nDeleted Messages Skipped : <code>{deleted}</code>\nErrors Occured : <code>{errors}</code>')

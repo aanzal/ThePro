@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b>Heyy {}.
-I'm an High-Tech Telegram Filter Bot :)
-Bot was Actually Made for <a href=https://t.me/CinemaGround>Cinema Ground</a>
+I'm Zayn Malik. An Advanced Telegram Filter Bot :)
+I was Actually Made for <a href=https://t.me/CinemaGround>Cinema Ground</a>
 
 Add me to your Groups & Enjoy!
 Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!</b>"""
@@ -12,8 +12,8 @@ Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!<
 
 That's it! <b>Bot is now Ready!</b>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
-    ABOUT_TXT = """🤖 𝐁𝐎𝐓 : <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡</a>
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
+    ABOUT_TXT = """🤖 𝐁𝐎𝐓 : <a href=https://t.me/ZaynAndMillie>𝗭𝗔𝗬𝗡</a>
 
 👨‍💻 𝐂𝐑𝐄𝐀𝐓𝐎𝐑 : <a href=https://t.me/axnzal>𝗛𝗨𝗠𝗔𝗡</a>
 
@@ -25,12 +25,14 @@ That's it! <b>Bot is now Ready!</b>
 
 📂 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : <a href=https://www.mongodb.com/>𝗠𝗢𝗡𝗚𝗢 𝗗𝗕</a>
 
-👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+👣 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 : <a href=https://t.me/ZaynAndMillie>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>
+
+👤 𝐒𝐈𝐒𝐓𝐄𝐑 : <a href=https://t.me/CGProBot>𝗠𝗜𝗟𝗟𝗜𝗘</a>"""
     SOURCE_TXT = """𝐇𝐄𝐋𝐏 : <b>Source Code</b>
 
 - Zayn Bot is a Private Source Project.
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     MANUELFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Filters</b>
 
 - Filter is the feature were users can set automated Replies for a particular keyword and Zayn will respond whenever a keyword is found in the message.
@@ -50,7 +52,7 @@ That's it! <b>Bot is now Ready!</b>
 ○ /delf - <code>Deletes a Specific Filter in the Connected Chat.</code>
 ○ /delallf - <code>Deletes the whole Filters in the Connected Chat ( For Chat Owner Only ).</code>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     BUTTON_TXT = """𝐇𝐄𝐋𝐏 : <b>Buttons</b>
 
 - Zayn Supports Both URL and ALERT Inline Buttons.
@@ -71,14 +73,14 @@ That's it! <b>Bot is now Ready!</b>
 ○ <b>Alert Buttons :</b>
 <code>[Button Text](buttonalert:This is an Alert message)</code>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     AUTOFILTER_TXT = """𝐇𝐄𝐋𝐏 : <b>Auto Filter</b>
 
 ○ Make me the <b>Admin</b> of your channel if it's private.
 ○ Make sure that your Channel does not contains <b>Camrips, Porn or Fake </b>files.
 ○ <b>Forward</b> the last message to me with quotes. I'll Add all the files in that channel to my <b>Data Base.</b>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     CONNECTION_TXT = """<b>𝐇𝐄𝐋𝐏 : <b>Connections</b>
 
 - Used to connect Bot to PM for managing filters.
@@ -97,7 +99,7 @@ That's it! <b>Bot is now Ready!</b>
 ○ /disconnectit  - <code>Disconnect from a Particular Chat.</code>
 ○ /myconnections - <code>List of all your Connections.</code></b>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     EXTRAMOD_TXT = """𝐇𝐄𝐋𝐏 : <b>Extra Modules</b>
 
 - These are the Extra Features of Zayn
@@ -109,7 +111,7 @@ That's it! <b>Bot is now Ready!</b>
 ○ /info  - <code>Gets Information About a Specifed User.</code>
 ○ /imdb | /search - <code>Get the Movie Information From Various Sources.</code>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>>
 """
     ADMIN_TXT = """<b>Oh Yeah, Wait for It!</b>"""
     STATUS_TXT = """» 𝗧𝗢𝗧𝗔𝗟 𝗙𝗜𝗟𝗘𝗦 : <code>{}</code>
@@ -118,13 +120,17 @@ That's it! <b>Bot is now Ready!</b>
 » 𝗨𝗦𝗘𝗗 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
 » 𝗙𝗥𝗘𝗘 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : <code>{}</code>
 
-<a href=https://t.me/XaynUpdates>𝗭𝗔𝗬𝗡 𝗨𝗣𝗗𝗔𝗧𝗘𝗦</a>"""
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     LOG_TEXT_G = """#NewGroup
 Group - {}(<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
+
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
+
+<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>
 """

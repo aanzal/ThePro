@@ -91,7 +91,7 @@ async def send_for_index(bot, message):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply(
-            f'Do you Want To Index This Channel?\n\nChat ID/ Username : <code>{chat_id}</code>\nLast Message ID : <code>{last_msg_id}</code>',
+            f'Do you Want To Index This Channel?\n\nChat ID / Username : <code>{chat_id}</code>\nLast Message ID : <code>{last_msg_id}</code>',
             reply_markup=reply_markup)
 
     if type(chat_id) is int:
@@ -113,9 +113,9 @@ async def send_for_index(bot, message):
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
     await bot.send_message(LOG_CHANNEL,
-                           f'#IndexRequest\n\nBy : {message.from_user.mention} (<code>{message.from_user.id}</code>)\nChat ID/ Username - <code> {chat_id}</code>\nLast Message ID - <code>{last_msg_id}</code>\nInviteLink - {link}',
+                           f'#IndexRequest\n\nBy : {message.from_user.mention} (<code>{message.from_user.id}</code>)\nChat ID / Username - <code> {chat_id}</code>\nLast Message ID - <code>{last_msg_id}</code>\nInviteLink - {link}\n\n𝗭𝗮𝘆𝗻',
                            reply_markup=reply_markup)
-    await message.reply('ThankYou For the Contribution, Wait to verify the files.')
+    await message.reply('Thank You for Your Submission.')
 
 
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))

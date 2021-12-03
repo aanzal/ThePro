@@ -8,7 +8,6 @@ Tap <code>Help</code> If you have any Doubt about how to use me in your Groups!<
     HELP_TXT = """𝐇𝐄𝐋𝐏 : <b>How to use me?</b>
 
 - Add me to your Group, Promote me as an Admin. 
-- Subscribe our <a href='https://t.me/CineGround'>Channel</a> , to get access of movies / Series!
 
 That's it! <b>Bot is now Ready!</b>
 
@@ -126,11 +125,11 @@ Group - {}(<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
 
-<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>
+<a href=https://t.me/XaynBot>𝗭𝗮𝘆𝗻</a>
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
 
-<a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>
+<a href=https://t.me/XaynBot>𝗭𝗮𝘆𝗻</a>
 """

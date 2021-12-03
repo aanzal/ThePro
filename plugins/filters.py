@@ -29,10 +29,10 @@ async def addfilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!", quote=True)
+                await message.reply_text("**Make sure I'm present in your group!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("**I'm not connected to any groups!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -132,10 +132,10 @@ async def get_all(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!", quote=True)
+                await message.reply_text("**Make sure I'm present in your group!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("**I'm not connected to any groups!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -195,10 +195,10 @@ async def deletefilter(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("**Make sure I'm present in your group!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("**I'm not connected to any groups!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
 
     elif chat_type in ["group", "supergroup"]:
         grp_id = message.chat.id
@@ -246,10 +246,10 @@ async def delallconfirm(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
+                await message.reply_text("**Make sure I'm present in your group!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
                 return
         else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
+            await message.reply_text("**I'm not connected to any groups!**\n\nRun /myconnections to Know Connected Groups.", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:

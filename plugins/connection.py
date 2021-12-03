@@ -50,7 +50,7 @@ async def addconnection(client,message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Successfully Connected to **{title}**\n\n❣️ From <a href='http://t.me/ZaynAndMillie'>𝗭𝗮𝘆𝗻</a>",
+                    f"Successfully Connected to **{title}**\n\n❣️ From 𝗭𝗮𝘆𝗻",
                     quote=True,
                     parse_mode="md"
                 )

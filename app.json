@@ -46,7 +46,7 @@
         },
         "PICS": {
             "description": "Add some telegraph link of pictures .",
-            "value": "https://telegra.ph/file/1ac036573c742678aa556.jpg https://telegra.ph/file/621a74d1af8cfbdff4790.jpg https://telegra.ph/file/8f3e2a5bc00f37225851b.jpg https://telegra.ph/file/9b78e86598c7d8eeb3717.jpg https://telegra.ph/file/60db926665f264f6428c0.jpg https://telegra.ph/file/3ef9472ab689f0f71e8c0.jpg https://telegra.ph/file/dc202376b1eced7cd03b7.jpg https://telegra.ph/file/e9ea5453e14aab47ec0ac.jpg https://telegra.ph/file/9421ad04d35623ef463e4.jpg https://telegra.ph/file/c2ec720c329b7d77e6d1c.jpg https://telegra.ph/file/5f3405b6767a24e7303bc.jpg",
+            "value": "https://telegra.ph/file/621a74d1af8cfbdff4790.jpg https://telegra.ph/file/8f3e2a5bc00f37225851b.jpg https://telegra.ph/file/9b78e86598c7d8eeb3717.jpg https://telegra.ph/file/60db926665f264f6428c0.jpg https://telegra.ph/file/3ef9472ab689f0f71e8c0.jpg https://telegra.ph/file/dc202376b1eced7cd03b7.jpg https://telegra.ph/file/9421ad04d35623ef463e4.jpg https://telegra.ph/file/5f3405b6767a24e7303bc.jpg https://telegra.ph/file/9e8c0c0089a0c479f57de.jpg https://telegra.ph/file/beee4e936a7ecb55af9ba.jpg https://telegra.ph/file/6ef3a486894fc625558c5.jpg",
             "required": false
         },
         "LOG_CHANNEL": {

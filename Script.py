@@ -121,7 +121,7 @@ That's it! <b>Bot is now Ready!</b>
 
 <a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     LOG_TEXT_G = """#NewGroup
-Group - {}(<code>{}</code>)
+Group - {} (<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
 

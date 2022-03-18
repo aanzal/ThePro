@@ -125,11 +125,11 @@ Group - {} (<code>{}</code>)
 Total Members - <code>{}</code>
 Added By - {}
 
-<a href=https://t.me/XaynBot>𝗭𝗮𝘆𝗻</a>
+𝗭𝗮𝘆𝗻
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
 
-<a href=https://t.me/XaynBot>𝗭𝗮𝘆𝗻</a>
+𝗭𝗮𝘆𝗻
 """

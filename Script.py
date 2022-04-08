@@ -14,13 +14,13 @@ That's it! <b>Bot is now Ready!</b>
 <a href=https://t.me/ZaynAndMillie>𝗭𝗮𝘆𝗻</a>"""
     ABOUT_TXT = """🤖 𝐁𝐎𝐓 : <a href=https://t.me/ZaynAndMillie>𝗭𝗔𝗬𝗡</a>
 
-👨‍💻 𝐂𝐑𝐄𝐀𝐓𝐎𝐑 : <a href=https://t.me/axnzal>𝗛𝗨𝗠𝗔𝗡</a>
+👨‍💻 𝐂𝐑𝐄𝐀𝐓𝐎𝐑 : <a href=https://t.me/telegram>𝗛𝗨𝗠𝗔𝗡</a>
 
 📚 𝐋𝐈𝐁𝐑𝐀𝐑𝐘 : <a href=https://github.com/pyrogram/pyrogram>𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠</a>
 
 📝 𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄 : <a href=https://www.python.org/>𝗣𝗬𝗧𝗛𝗢𝗡</a>
 
-📡 𝐁𝐎𝐓 𝐒𝐄𝐑𝐕𝐄𝐑 : <a href=http://heroku.com/>𝗛𝗘𝗥𝗢𝗞𝗨</a>
+📡 𝐁𝐎𝐓 𝐒𝐄𝐑𝐕𝐄𝐑 : <a href=http://google.com/>𝐈𝐍𝐓𝐄𝐑𝐍𝐄𝐓</a>
 
 📂 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄 : <a href=https://www.mongodb.com/>𝗠𝗢𝗡𝗚𝗢 𝗗𝗕</a>
 
